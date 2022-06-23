@@ -1,0 +1,155 @@
+@import url("https://fonts.googleapis.com/css2?family=Passion+One&family=Work+Sans&display=swap");
+
+/* Removing the preset padding and margin */
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  color: white;
+  background-color: black;
+}
+
+/* Styling Header */
+header {
+  background-image: url("./assets/image/animax-bg.png");
+  background-size: 100% 100%;
+  max-width: 100%;
+  max-height: 100%;
+  border: 8px solid #1b1717;
+}
+
+#logo img {
+  height: 5vh;
+}
+
+#header-text > p {
+  width: 300px;
+}
+
+nav {
+  margin: 2% 7%;
+}
+
+#scroll {
+  width: 80px;
+  filter: invert(18%) sepia(84%) saturate(7500%) hue-rotate(332deg)
+    brightness(98%) contrast(96%);
+}
+
+.movie-text {
+  max-width: 400px;
+}
+
+/* Styling header text */
+#header-text {
+  max-width: 500px;
+  min-height: 300px;
+  padding: 10% 0%;
+  margin: auto;
+  align-items: center;
+  text-align: center;
+}
+
+/* Styling buttons */
+.button {
+  background-color: #f50a5f;
+  padding: 7px;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+/* Styling play button */
+#play {
+  display: inline;
+}
+
+/* Giving size to the div */
+.movie-image {
+  height: 240px;
+  width: 400px;
+}
+
+.movie-image > img {
+  width: 100%;
+}
+
+h1 {
+  font-family: "Passion One", cursive;
+  font-size: 55px;
+  font-weight: lighter;
+}
+
+p {
+  font-family: "Work Sans", sans-serif;
+  font-size: 22px;
+}
+
+.movie-text > p {
+  margin: 22px 0px;
+}
+
+hr {
+  color: #1b1717;
+  border: 4px solid #1b1717;
+}
+
+footer {
+  height: 90px;
+  text-align: center;
+}
+
+.flex-container {
+  /* Iteration 1: Display should be flex with all the item in center and have space between them. */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.movies {
+  /* Iteration 2: Using Use appropriate property to wrap content. */
+  flex-wrap: wrap;
+  min-height: 300px;
+  margin: 3% 14%;
+}
+
+.flex-column {
+  /* Iteration 3: Display should be flex in vertical direction and content should be evenly spaced*/
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+#scroll {
+  position: relative;
+  animation: mymove 3s infinite;
+  animation-play-state: running;
+}
+
+@keyframes mymove {
+  from {
+    top: 15px;
+  }
+
+  to {
+    top: 100px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .wrap-reverse {
+    flex-wrap: wrap-reverse;
+  }
+
+  .container {
+    text-align: center;
+  }
+
+  .button {
+    margin: 0% 2%;
+  }
+}
